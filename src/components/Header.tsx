@@ -11,7 +11,7 @@ const Header = () => {
           ariaLabel="App launcher"
         />
         <div className="header-brand">
-          <span className="brand-text">Vaven</span>
+          <span className="brand-text">IRM Multicloud PM Prototypes</span>
         </div>
       </div>
       <div className="header-center">

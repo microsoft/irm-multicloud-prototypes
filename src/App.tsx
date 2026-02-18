@@ -37,12 +37,6 @@ function App() {
     })
   }
 
-  const handleLogout = () => {
-    instance.logoutRedirect().catch((e) => {
-      console.error(e)
-    })
-  }
-
   // Show login screen if not authenticated
   if (!isAuthenticated) {
     return (

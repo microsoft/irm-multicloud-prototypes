@@ -1,0 +1,114 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  background-color: #005a9e;
+  color: white;
+  padding: 0 16px;
+  gap: 16px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.header .app-launcher {
+  color: white;
+  min-width: 32px;
+  background-color: transparent;
+}
+
+.header .app-launcher:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header .app-launcher i {
+  color: white;
+}
+
+.brand-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.header-center {
+  flex: 1;
+  max-width: 600px;
+}
+
+.header .search-box {
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+.header .search-box * {
+  background-color: white !important;
+}
+
+.header .search-box input {
+  color: #323130 !important;
+}
+
+.header .search-box button {
+  background-color: white !important;
+  color: #323130 !important;
+}
+
+.header .search-box i {
+  color: #323130 !important;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header .copilot-btn {
+  background-color: #c239b3;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 2px;
+  gap: 6px;
+  margin-right: 8px;
+}
+
+.header .copilot-btn:hover {
+  background-color: #a82e9a;
+}
+
+.header .header-icon-btn {
+  background-color: transparent;
+  color: white;
+  min-width: 40px;
+  height: 40px;
+}
+
+.header .header-icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header .header-icon-btn i {
+  color: white;
+  font-size: 16px;
+}
+
+.header .user-avatar {
+  cursor: pointer;
+  background-color: #6264a7;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}

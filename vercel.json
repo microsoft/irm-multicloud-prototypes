@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "WWW-Authenticate": "Basic realm=\"Prototype Access\"",
+        "Authorization": "Basic <credentials>"
+      },
+      "continue": true
+    }
+  ]
+}

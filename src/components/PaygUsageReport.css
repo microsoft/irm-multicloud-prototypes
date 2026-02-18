@@ -1,0 +1,274 @@
+.payg-content {
+  flex: 1;
+  padding: 24px 48px;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #605e5c;
+  margin-bottom: 16px;
+}
+
+.breadcrumb .separator {
+  margin: 0 8px;
+}
+
+.payg-header {
+  margin-bottom: 24px;
+}
+
+.payg-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 8px 0;
+}
+
+.payg-subtitle {
+  font-size: 14px;
+  color: #605e5c;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.last-updated {
+  font-size: 12px;
+  color: #605e5c;
+  margin-top: 8px;
+}
+
+.payg-insights-callout {
+  margin-bottom: 48px;
+  padding: 24px;
+  background-color: #faf9f8;
+  border-radius: 4px;
+  border: 1px solid #edebe9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.insights-message {
+  font-size: 14px;
+  color: #323130;
+  margin: 0;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.payg-insights-section {
+  margin-bottom: 48px;
+  padding: 24px;
+  background-color: #faf9f8;
+  border-radius: 4px;
+  border: 1px solid #edebe9;
+}
+
+.insights-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.summary-message {
+  font-size: 14px;
+  color: #323130;
+  margin: 0;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.insights-details {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #edebe9;
+}
+
+.insights-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 16px 0;
+}
+
+.payg-insights-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 8px 0;
+}
+
+.insights-description {
+  font-size: 14px;
+  color: #605e5c;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.insight-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #e1dfdd;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.insight-percentage {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0078d4;
+}
+
+.insight-description {
+  font-size: 13px;
+  color: #323130;
+  line-height: 1.4;
+}
+
+.payg-info-banner {
+  margin-bottom: 24px;
+  background-color: #f3f2f1;
+  border-left: 3px solid #605e5c;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.banner-button {
+  flex-shrink: 0;
+}
+
+.payg-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 400px;
+}
+
+.insight-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.payg-empty-state h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 32px 0;
+  max-width: 600px;
+}
+
+.payg-insight-heading {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: 1.4;
+  margin: 0 !important;
+  font-family: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.highlight-stat {
+  color: #0078d4;
+  font-weight: 700;
+}
+
+.empty-state-icon {
+  margin-bottom: 32px;
+}
+
+.large-icon {
+  font-size: 120px;
+  color: #0078d4;
+  opacity: 0.8;
+}
+
+.recommendations-section {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 40px;
+}
+
+.recommendations-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+.recommendation-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.recommendation-card {
+  background-color: #faf9f8;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recommendation-icon {
+  margin-bottom: 8px;
+}
+
+.recommendation-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0;
+}
+
+.recommendation-card p {
+  font-size: 14px;
+  color: #605e5c;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.recommendation-card button {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.empty-state-description {
+  font-size: 14px;
+  color: #605e5c;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  max-width: 500px;
+}
+
+.empty-state-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}

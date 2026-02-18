@@ -1,0 +1,273 @@
+.policy-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 16px;
+}
+
+.policy-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e1dfdd;
+}
+
+.metadata-item {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.metadata-label {
+  color: #605e5c;
+  min-width: 120px;
+}
+
+.metadata-value {
+  color: #323130;
+}
+
+.panel-tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 2px solid #e1dfdd;
+  margin-bottom: 16px;
+}
+
+.panel-tab {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #605e5c;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.panel-tab:hover {
+  color: #323130;
+}
+
+.panel-tab.active {
+  color: #0078d4;
+  border-bottom-color: #0078d4;
+  font-weight: 600;
+}
+
+.policy-health-tab h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 16px 0;
+}
+
+.status-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.status-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.status-item i {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.status-item.success {
+  color: #107c10;
+}
+
+.status-item.warning {
+  color: #f7630c;
+}
+
+.troubleshooting-section {
+  margin-bottom: 24px;
+}
+
+.troubleshooting-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 12px 0;
+}
+
+.troubleshooting-section ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.troubleshooting-section li {
+  font-size: 14px;
+  color: #323130;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.recommendations-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 12px 0;
+}
+
+.recommendation-card-extended {
+  background-color: #f3f2f1;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.recommendation-card-extended h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recommendation-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.badge-payg {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: #deecf9;
+  color: #0078d4;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.badge-payg i {
+  font-size: 16px;
+}
+
+.recommendation-icon {
+  color: #0078d4;
+  font-size: 20px;
+}
+
+.recommendation-description {
+  font-size: 14px;
+  color: #323130;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.recommendation-action-text {
+  font-size: 14px;
+  color: #323130;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.recommendation-action-text strong {
+  font-weight: 600;
+}
+
+.data-source-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.data-source-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.data-source-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+}
+
+.data-source-detail {
+  font-size: 14px;
+  color: #605e5c;
+}
+
+.recommendation-action-btn {
+  margin-top: 4px;
+}
+
+.recommendation-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #e1dfdd;
+  margin-bottom: 12px;
+}
+
+.recommendation-card h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 8px 0;
+}
+
+.recommendation-card p {
+  font-size: 14px;
+  color: #605e5c;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.indicator-list {
+  margin: 12px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.indicator-list li {
+  font-size: 14px;
+  color: #323130;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.recommendation-action {
+  margin-top: 4px;
+}
+
+.get-started-button {
+  margin-top: 12px;
+}
+
+.panel-footer {
+  display: flex;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid #e1dfdd;
+  margin-top: auto;
+}
+
+.policy-settings-tab {
+  font-size: 14px;
+  color: #323130;
+}

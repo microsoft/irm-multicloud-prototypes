@@ -1,0 +1,114 @@
+.inform-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2001;
+}
+
+.inform-dialog-container {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.inform-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 24px 16px 24px;
+  border-bottom: 1px solid #edebe9;
+}
+
+.inform-dialog-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0;
+  flex: 1;
+  padding-right: 16px;
+  line-height: 1.3;
+}
+
+.inform-dialog-content {
+  padding: 20px 24px 24px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.inform-dialog-description {
+  font-size: 14px;
+  color: #605e5c;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.email-section {
+  margin-bottom: 20px;
+}
+
+.email-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 8px;
+}
+
+.email-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #323130;
+  line-height: 1.5;
+  border: 1px solid #8a8886;
+  border-radius: 2px;
+  resize: vertical;
+  box-sizing: border-box;
+  background-color: #f3f2f1;
+}
+
+.email-textarea:focus {
+  outline: none;
+  border-color: #0078d4;
+}
+
+.recipients-section {
+  margin-bottom: 20px;
+}
+
+.recipients-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 8px;
+}
+
+.inform-dialog-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #edebe9;
+}
+
+.inform-dialog-actions button[class*="primary"] {
+  background-color: #038387;
+  border-color: #038387;
+}
+
+.inform-dialog-actions button[class*="primary"]:hover {
+  background-color: #027175;
+  border-color: #027175;
+}

@@ -1,0 +1,196 @@
+/* Reuse styles from DetailsPanel with magenta color scheme */
+.data-theft-panel {
+  width: 600px;
+  background-color: #ffffff;
+  border-left: 1px solid #e1dfdd;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 0;
+  top: 48px;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.data-theft-panel .panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e1dfdd;
+}
+
+.data-theft-panel .panel-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0;
+  flex: 1;
+}
+
+.data-theft-panel .panel-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 24px 0 24px;
+}
+
+.data-theft-panel .panel-intro {
+  font-size: 14px;
+  color: #323130;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.data-theft-panel .panel-divider {
+  height: 1px;
+  background-color: #edebe9;
+  margin: 0 0 20px 0;
+}
+
+.data-theft-panel .panel-section {
+  margin-bottom: 20px;
+}
+
+.data-theft-panel .section-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.data-theft-panel .toggle-icon-btn {
+  min-width: 16px;
+  padding: 0;
+}
+
+.data-theft-panel .section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #323130;
+}
+
+.data-theft-panel .section-content {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.data-theft-panel .detection-summary {
+  font-size: 14px;
+  color: #323130;
+  margin: 0 0 16px 0;
+}
+
+.data-theft-panel .subsection-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+  margin: 20px 0 12px 0;
+}
+
+.data-theft-panel .activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.data-theft-panel .activity-line {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.data-theft-panel .activity-line.first-activity {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.data-theft-panel .activity-percentage-alt {
+  font-weight: 600;
+  color: #e3008c;
+}
+
+.data-theft-panel .activity-line.first-activity .activity-percentage-alt {
+  font-weight: 700;
+}
+
+.data-theft-panel .activity-description {
+  color: #323130;
+  font-weight: 400;
+}
+
+.data-theft-panel .recommendation-section {
+  margin-top: 20px;
+}
+
+.data-theft-panel .recommendation-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 16px 0;
+}
+
+.data-theft-panel .recommendation-item {
+  padding: 16px;
+  background-color: #faf9f8;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  border: 1px solid #e1dfdd;
+}
+
+.data-theft-panel .recommendation-item:last-child {
+  margin-bottom: 0;
+}
+
+.data-theft-panel .recommendation-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.data-theft-panel .recommendation-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0;
+}
+
+.data-theft-panel .badge-payg {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: #deecf9;
+  color: #0078d4;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.data-theft-panel .badge-payg i {
+  font-size: 16px;
+}
+
+.data-theft-panel .recommendation-description {
+  font-size: 14px;
+  color: #323130;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.data-theft-panel .panel-footer {
+  display: flex;
+  gap: 8px;
+  padding: 16px 24px;
+  border-top: 1px solid #edebe9;
+  background-color: #ffffff;
+}

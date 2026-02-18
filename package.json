@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://microsoft.github.io/irm-multicloud-prototypes",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,6 +13,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@azure/msal-browser": "^5.2.0",
+    "@azure/msal-react": "^5.0.4",
     "@fluentui/react": "^8.125.4",
     "@fluentui/react-components": "^9.72.11",
     "@fluentui/react-icons": "^2.0.318",

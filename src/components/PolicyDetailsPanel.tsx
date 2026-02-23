@@ -98,7 +98,7 @@ const PolicyDetailsPanel = ({ isOpen, onDismiss, policyName, hasPAYGSubscription
                       Extend the policy to non-Microsoft 365 data sources
                     </h5>
                     <p className="recommendation-description">
-                      Your policies can detect risky activities across cloud storage, cloud services, and Microsoft Fabric data sources.
+                      <strong>Did you know that 24% of your users exfiltrated non-Microsoft 365 data in the past month?</strong> Your policies can detect risky activities across cloud storage, cloud services, and Microsoft Fabric data sources.
                     </p>
                     <p className="recommendation-action-text">
                       <strong>Recommendation:</strong> Set up an Azure subscription to enable monitoring for Cloud storage (Box, Dropbox, Google Drive), Cloud services (Azure, AWS), and Microsoft Fabric (Power BI, Lakehouse).
@@ -122,7 +122,7 @@ const PolicyDetailsPanel = ({ isOpen, onDismiss, policyName, hasPAYGSubscription
                       </div>
                     </div>
                     <p className="recommendation-description">
-                      Extend your policy coverage to detect risky activities across cloud storage, cloud services, and Microsoft Fabric data sources.
+                      <strong>Did you know that 24% of your users exfiltrated non-Microsoft 365 data in the past month?</strong> Extend your policy coverage to detect risky activities across cloud storage, cloud services, and Microsoft Fabric data sources.
                     </p>
                     <p className="recommendation-action-text">
                       <strong>Recommendation:</strong> Add indicators for Cloud storage (Box, Dropbox, Google Drive), Cloud services (Azure, AWS), and Microsoft Fabric (Power BI, Lakehouse) with default thresholds by clicking the button below.

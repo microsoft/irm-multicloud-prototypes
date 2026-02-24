@@ -151,6 +151,51 @@ Each component has its own CSS file for easy customization. Colors follow Micros
 - Accent: `#00bcf2`, `#e3008c`
 - Neutral: `#323130`, `#605e5c`, `#f3f2f1`
 
+## Deploying Changes to Microsoft GitHub Repository
+
+This project is hosted at [microsoft/irm-multicloud-prototypes](https://github.com/microsoft/irm-multicloud-prototypes) and published to [https://microsoft.github.io/irm-multicloud-prototypes/](https://microsoft.github.io/irm-multicloud-prototypes/).
+
+### Prerequisites: Elevating Access
+
+Before you can push changes to the Microsoft GitHub repository, you need write access. Follow these steps:
+
+1. **Request elevated access** at:
+   👉 https://repos.opensource.microsoft.com/orgs/microsoft/repos/irm-multicloud-prototypes
+
+2. Wait for the access request to be approved.
+
+3. Once approved, add the Microsoft repo as a remote (only needed once):
+   ```powershell
+   git remote add microsoft https://github.com/Microsoft/irm-multicloud-prototypes.git
+   ```
+
+### Pushing Code Changes
+
+After making code changes, commit and push to both remotes:
+
+```powershell
+# Commit your changes
+git add .
+git commit -m "Your commit message"
+
+# Push to your personal repo
+git push
+
+# Push to Microsoft repo (requires elevated access)
+git push microsoft main
+```
+
+### Deploying to GitHub Pages
+
+After pushing, build and deploy to update the live site:
+
+```powershell
+npm run build
+npx gh-pages -d dist -r https://github.com/microsoft/irm-multicloud-prototypes.git -f
+```
+
+The live site will update within 1-2 minutes at [https://microsoft.github.io/irm-multicloud-prototypes/](https://microsoft.github.io/irm-multicloud-prototypes/).
+
 ## License
 
 MIT

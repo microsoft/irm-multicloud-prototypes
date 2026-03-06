@@ -13,6 +13,12 @@ export const msalConfig: Configuration = {
 };
 
 // Scopes for the access token request
+// Bundling Kusto here means the user consents once at login — no separate popup needed
 export const loginRequest: PopupRequest = {
-  scopes: ["User.Read"]
+  scopes: ["User.Read", "https://kusto.kusto.windows.net/user_impersonation"]
+};
+
+// Azure Data Explorer scope for o365monweu cluster
+export const adxRequest = {
+  scopes: ["https://kusto.kusto.windows.net/user_impersonation"]
 };

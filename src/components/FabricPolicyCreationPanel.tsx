@@ -4,9 +4,10 @@ import { PrimaryButton, DefaultButton, IconButton, Icon, TextField, MessageBar, 
 
 interface FabricPolicyCreationPanelProps {
   onClose: () => void
+  onPolicyCreated?: () => void
 }
 
-const FabricPolicyCreationPanel = ({ onClose }: FabricPolicyCreationPanelProps) => {
+const FabricPolicyCreationPanel = ({ onClose, onPolicyCreated }: FabricPolicyCreationPanelProps) => {
   const [policyName, setPolicyName] = useState('Microsoft Fabric data leaks (quick policy) - 2/4/2026')
 
   const indicators = [
@@ -120,7 +121,7 @@ const FabricPolicyCreationPanel = ({ onClose }: FabricPolicyCreationPanelProps) 
       </div>
 
       <div className="policy-panel-footer">
-        <PrimaryButton>Create policy</PrimaryButton>
+        <PrimaryButton onClick={() => { onPolicyCreated?.(); onClose(); }}>Create policy</PrimaryButton>
         <DefaultButton onClick={onClose}>Customize</DefaultButton>
       </div>
     </div>

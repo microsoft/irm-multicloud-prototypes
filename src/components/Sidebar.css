@@ -168,6 +168,19 @@
   flex-shrink: 0;
 }
 
+.nav-sub-item {
+  padding-left: 36px;
+  font-size: 13px;
+  border-left: 2px solid #e1dfdd;
+  margin-left: 12px;
+  width: calc(100% - 12px);
+}
+
+.nav-sub-item.active {
+  border-left: 2px solid #0078d4;
+  background-color: #edebe9;
+}
+
 .sidebar .sidebar-toggle,
 .sidebar-top button {
   min-width: 48px;

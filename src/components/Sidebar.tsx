@@ -53,6 +53,14 @@ const Sidebar = ({ activePage, onPageChange }: SidebarProps) => {
             </span>
             {isExpanded && <span className="nav-label">Fabric Governance Hub</span>}
           </button>
+          {isExpanded && (activePage === 'fabric' || activePage === 'fabric-irm-policies') && (
+            <button className={activePage === 'fabric-irm-policies' ? 'nav-item nav-sub-item active' : 'nav-item nav-sub-item'} onClick={() => onPageChange('fabric-irm-policies')}>
+              <span className="nav-icon">
+                <i className="ms-Icon ms-Icon--Health" aria-hidden="true"></i>
+              </span>
+              <span className="nav-label">IRM Policies</span>
+            </button>
+          )}
           <button className={activePage === 'payg' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('payg')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--ReportDocument" aria-hidden="true"></i>
@@ -98,6 +106,12 @@ const Sidebar = ({ activePage, onPageChange }: SidebarProps) => {
             </span>
             {isExpanded && <span className="nav-label">Audit Search</span>}
             {isExpanded && <span className="under-construction-badge">🚧</span>}
+          </button>
+          <button className={activePage === 'adoption-funnel' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('adoption-funnel')}>
+            <span className="nav-icon">
+              <i className="ms-Icon ms-Icon--BarChartVerticalFill" aria-hidden="true"></i>
+            </span>
+            {isExpanded && <span className="nav-label">Adoption Funnel</span>}
           </button>
         </div>
       </div>

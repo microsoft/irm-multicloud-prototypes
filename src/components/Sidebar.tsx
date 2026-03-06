@@ -1,14 +1,19 @@
 import { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import './Sidebar.css'
 import { IconButton } from '@fluentui/react'
 
-interface SidebarProps {
-  activePage: string
-  onPageChange: (page: string) => void
-}
-
-const Sidebar = ({ activePage, onPageChange }: SidebarProps) => {
+const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  // Extract the page segment from the pathname (e.g. "/analytics" → "analytics")
+  const currentPath = location.pathname
+
+  const isActive = (path: string) => currentPath === path || currentPath.startsWith(path + '/')
+
+  const go = (path: string) => navigate(path)
 
   return (
     <aside className={`sidebar ${isExpanded ? 'expanded' : ''}`}>
@@ -41,73 +46,73 @@ const Sidebar = ({ activePage, onPageChange }: SidebarProps) => {
         </div>
         
         <div className="nav-single-item">
-          <button className={activePage === 'analytics' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('analytics')}>
+          <button className={isActive('/analytics') ? 'nav-item active' : 'nav-item'} onClick={() => go('/analytics')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--BarChartVertical" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">Insider Risk Management Analytics</span>}
           </button>
-          <button className={activePage === 'fabric' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('fabric')}>
+          <button className={isActive('/fabric') ? 'nav-item active' : 'nav-item'} onClick={() => go('/fabric')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--FabricDataConnectionLibrary" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">Fabric Governance Hub</span>}
           </button>
-          {isExpanded && (activePage === 'fabric' || activePage === 'fabric-irm-policies') && (
-            <button className={activePage === 'fabric-irm-policies' ? 'nav-item nav-sub-item active' : 'nav-item nav-sub-item'} onClick={() => onPageChange('fabric-irm-policies')}>
+          {isExpanded && (isActive('/fabric')) && (
+            <button className={currentPath === '/fabric/irm-policies' ? 'nav-item nav-sub-item active' : 'nav-item nav-sub-item'} onClick={() => go('/fabric/irm-policies')}>
               <span className="nav-icon">
                 <i className="ms-Icon ms-Icon--Health" aria-hidden="true"></i>
               </span>
               <span className="nav-label">IRM Policies</span>
             </button>
           )}
-          <button className={activePage === 'payg' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('payg')}>
+          <button className={isActive('/payg') ? 'nav-item active' : 'nav-item'} onClick={() => go('/payg')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--ReportDocument" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">PAYG Usage Report</span>}
           </button>
-          <button className={activePage === 'purview-irm' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('purview-irm')}>
+          <button className={isActive('/purview-irm') ? 'nav-item active' : 'nav-item'} onClick={() => go('/purview-irm')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--Home" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">Purview Home - Recommendations</span>}
           </button>
-          <button className={activePage === 'policy-health' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('policy-health')}>
+          <button className={isActive('/policies') ? 'nav-item active' : 'nav-item'} onClick={() => go('/policies')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--Health" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">Policy Health Recommendations</span>}
           </button>
-          <button className={activePage === 'exfil-dspm' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('exfil-dspm')}>
+          <button className={isActive('/exfil-dspm') ? 'nav-item active' : 'nav-item'} onClick={() => go('/exfil-dspm')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--Shield" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">Exfil Objective in DSPM</span>}
             {isExpanded && <span className="under-construction-badge">🚧</span>}
           </button>
-          <button className={activePage === 'user-analytics-dspm' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('user-analytics-dspm')}>
+          <button className={isActive('/user-analytics-dspm') ? 'nav-item active' : 'nav-item'} onClick={() => go('/user-analytics-dspm')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--People" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">User Analytics in DSPM</span>}
             {isExpanded && <span className="under-construction-badge">🚧</span>}
           </button>
-          <button className={activePage === 'defender' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('defender')}>
+          <button className={isActive('/defender') ? 'nav-item active' : 'nav-item'} onClick={() => go('/defender')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--DefenderTVM" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">Defender</span>}
             {isExpanded && <span className="under-construction-badge">🚧</span>}
           </button>
-          <button className={activePage === 'audit-search' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('audit-search')}>
+          <button className={isActive('/audit-search') ? 'nav-item active' : 'nav-item'} onClick={() => go('/audit-search')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--Search" aria-hidden="true"></i>
             </span>
             {isExpanded && <span className="nav-label">Audit Search</span>}
             {isExpanded && <span className="under-construction-badge">🚧</span>}
           </button>
-          <button className={activePage === 'adoption-funnel' ? 'nav-item active' : 'nav-item'} onClick={() => onPageChange('adoption-funnel')}>
+          <button className={isActive('/adoption-funnel') ? 'nav-item active' : 'nav-item'} onClick={() => go('/adoption-funnel')}>
             <span className="nav-icon">
               <i className="ms-Icon ms-Icon--BarChartVerticalFill" aria-hidden="true"></i>
             </span>

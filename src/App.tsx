@@ -16,9 +16,9 @@ import DataTheftPanel from './components/DataTheftPanel'
 import PolicyCreationPanel from './components/PolicyCreationPanel'
 import DataTheftPolicyPanel from './components/DataTheftPolicyPanel'
 import { useState } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
-function App() {
-  const [activePage, setActivePage] = useState('analytics')
+function AnalyticsPage() {
   const [isPanelOpen, setIsPanelOpen] = useState(true)
   const [isDataTheftPanelOpen, setIsDataTheftPanelOpen] = useState(false)
   const [isPolicyPanelOpen, setIsPolicyPanelOpen] = useState(false)
@@ -39,32 +39,40 @@ function App() {
   }
 
   return (
+    <>
+      <MainContent
+        onPanelToggle={() => setIsPanelOpen(!isPanelOpen)}
+        onDataTheftPanelToggle={handleOpenDataTheftPanel}
+      />
+      {isPanelOpen && <DetailsPanel onClose={() => setIsPanelOpen(false)} onOpenPolicyPanel={handleOpenPolicyPanel} />}
+      {isDataTheftPanelOpen && <DataTheftPanel onClose={() => setIsDataTheftPanelOpen(false)} onOpenPolicyPanel={handleOpenDataTheftPolicyPanel} />}
+      {isPolicyPanelOpen && <PolicyCreationPanel onClose={() => setIsPolicyPanelOpen(false)} />}
+      {isDataTheftPolicyPanelOpen && <DataTheftPolicyPanel onClose={() => setIsDataTheftPolicyPanelOpen(false)} />}
+    </>
+  )
+}
+
+function App() {
+  return (
     <div className="app">
       <Header />
       <div className="app-container">
-        <Sidebar activePage={activePage} onPageChange={setActivePage} />
-        {activePage === 'analytics' && (
-          <>
-            <MainContent 
-              onPanelToggle={() => setIsPanelOpen(!isPanelOpen)}
-              onDataTheftPanelToggle={handleOpenDataTheftPanel}
-            />
-            {isPanelOpen && <DetailsPanel onClose={() => setIsPanelOpen(false)} onOpenPolicyPanel={handleOpenPolicyPanel} />}
-            {isDataTheftPanelOpen && <DataTheftPanel onClose={() => setIsDataTheftPanelOpen(false)} onOpenPolicyPanel={handleOpenDataTheftPolicyPanel} />}
-            {isPolicyPanelOpen && <PolicyCreationPanel onClose={() => setIsPolicyPanelOpen(false)} />}
-            {isDataTheftPolicyPanelOpen && <DataTheftPolicyPanel onClose={() => setIsDataTheftPolicyPanelOpen(false)} />}
-          </>
-        )}
-        {activePage === 'fabric' && <FabricGovernanceHub />}
-        {activePage === 'fabric-irm-policies' && <PolicyHealthRecommendations />}
-        {activePage === 'payg' && <PaygUsageReport />}
-        {activePage === 'purview-irm' && <PurviewHomeIRM />}
-        {activePage === 'exfil-dspm' && <ExfilObjectiveDSPM />}
-        {activePage === 'user-analytics-dspm' && <UserAnalyticsDSPM />}
-        {activePage === 'defender' && <Defender />}
-        {activePage === 'audit-search' && <AuditSearch />}
-        {activePage === 'policy-health' && <PolicyHealthRecommendations />}
-        {activePage === 'adoption-funnel' && <AdoptionFunnel />}
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Navigate to="/analytics" replace />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/fabric" element={<FabricGovernanceHub />} />
+          <Route path="/fabric/irm-policies" element={<PolicyHealthRecommendations />} />
+          <Route path="/payg" element={<PaygUsageReport />} />
+          <Route path="/purview-irm" element={<PurviewHomeIRM />} />
+          <Route path="/exfil-dspm" element={<ExfilObjectiveDSPM />} />
+          <Route path="/user-analytics-dspm" element={<UserAnalyticsDSPM />} />
+          <Route path="/defender" element={<Defender />} />
+          <Route path="/audit-search" element={<AuditSearch />} />
+          <Route path="/policies" element={<PolicyHealthRecommendations />} />
+          <Route path="/adoption-funnel" element={<AdoptionFunnel />} />
+          <Route path="*" element={<Navigate to="/analytics" replace />} />
+        </Routes>
       </div>
     </div>
   )

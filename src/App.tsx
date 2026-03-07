@@ -61,6 +61,16 @@ function App() {
   const { instance, inProgress } = useMsal()
   const [showRetry, setShowRetry] = useState(false)
 
+  // Identify the signed-in user in Microsoft Clarity
+  useEffect(() => {
+    if (isAuthenticated) {
+      const account = instance.getActiveAccount()
+      if (account?.username && (window as any).clarity) {
+        (window as any).clarity('identify', account.username, undefined, undefined, account.name)
+      }
+    }
+  }, [isAuthenticated, instance])
+
   useEffect(() => {
     if (inProgress !== InteractionStatus.None) {
       const timer = setTimeout(() => setShowRetry(true), 5000)
